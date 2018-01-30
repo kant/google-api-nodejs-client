@@ -146,7 +146,7 @@ Supported APIs are listed on the [Google APIs Explorer][apiexplorer].
 This client comes with an [OAuth2][oauth] client that allows you to retrieve an access token and refreshes the token and retry the request seamlessly if you
 also provide an `expiry_date` and the token is expired. The basics of Google's OAuth2 implementation is explained on [Google Authorization and Authentication documentation][authdocs].
 
-In the following examples, you may need a `CLIENT_ID`, `CLIENT_SECRET` and `REDIRECT_URL`. You can find these pieces of information by going to the [Developer Console][devconsole], clicking your project --> APIs & auth --> credentials.
+In the following examples, you may need a `CLIENT_ID`, `CLIENT_SECRET` and `REDIRECT_URL`. You can find these pieces of information by going to the [Developer Console][devconsole], clicking `your project` --> `APIs & auth` --> `credentials`.
 
 For more information about OAuth2 and how it works, [see here][oauth].
 
@@ -290,7 +290,7 @@ oauth2Client.refreshAccessToken(function(err, tokens) {
 
 #### Using API keys
 
-You may need to send an API key with the request you are going to make. The following uses an API key to make a request to the Google+ API service to retrieve a person's profile given a userId:
+You may need to send an API key with the request you are going to make. The following uses an API key to make a request to the Google+ API service to retrieve a person's profile given a `userId`:
 
 ``` js
 var {google} = require('googleapis');
@@ -359,7 +359,7 @@ Rather than manually creating an OAuth2 client, JWT client, or Compute client, t
 
 For example, a JWT auth client will be created when your code is running on your local developer machine, and a Compute client will be created when the same code is running on a configured instance of Google Compute Engine.
 
-The code below shows how to retrieve a default credential type, depending upon the runtime environment. The createScopedRequired must be called to determine when you need to pass in the scopes manually, and when they have been set for you automatically based on the configured runtime environment.
+The code below shows how to retrieve a default credential type, depending upon the runtime environment. The `createScopedRequired` must be called to determine when you need to pass in the scopes manually, and when they have been set for you automatically based on the configured runtime environment.
 
 ```js
 // This method looks for the GCLOUD_PROJECT and GOOGLE_APPLICATION_CREDENTIALS
